@@ -1,12 +1,15 @@
+const path = require('path');
 var config = {
-   entry: './index.js',
+   entry: './index.jsx',
 	
    output: {
-      path: __dirname,
+      path: path.join(__dirname, 'public'),
+      publicPath: '/',
       filename: 'bundle.js',
    },
 	
    devServer: {
+      contentBase: './public',
       inline: true,
       port: 8080
    },
