@@ -11,6 +11,7 @@ var config = {
    devServer: {
       contentBase: './public',
       inline: true,
+      hot: true,
       port: 8080
    },
 	
@@ -26,7 +27,10 @@ var config = {
             }
          }
       ]
-   }
+   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
 }
 
 module.exports = config;
